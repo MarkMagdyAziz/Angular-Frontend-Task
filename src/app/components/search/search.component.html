@@ -1,0 +1,31 @@
+<div class="container-fluid shadow min-vh-25 py-4">
+  <div class="row mt-1">
+    <div class="col-md-5 mx-auto">
+      <div class="input-group">
+        <input [(ngModel)]="query" class="form-control border-end-0 border" type="search" value="search"
+          (keyup)="handeSearchQuery(query)" id="example-search-input">
+        <span class="input-group-append">
+          <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
+            <i class="fa fa-search"></i>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="container mt-4">
+  <div class="row d-flex justify-content-center align-itmes-center">
+    <ng-container *ngFor="let product of products ">
+      <div class="card col-md-3 col-lg-2 ms-2 mb-2" style="width: 16rem;" HoverShadow="red">
+        <img [src]="product.thumbnail" class="card-img-top img-fluid" alt="product img">
+        <div class="card-body d-flex flex-column justify-content-between align-items-center">
+          <h5 class="card-title">{{product.title}}</h5>
+          <p class="card-text">{{product.price | currency}}
+          </p>
+
+          <a class=" btn btn-primary align-self-center" [routerLink]="['/Details' , product.id]">Details</a>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</section>

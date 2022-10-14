@@ -1,0 +1,27 @@
+@import url('https://kit.fontawesome.com/b92e1ad9d5.js');
+
+body {
+  background: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+
+.price span {
+  font-size: 18px
+}
+
+.cut {
+  text-decoration: line-through;
+  color: red
+}
+
+.icons i {
+  font-size: 17px;
+  color: green;
+  margin-right: 2px
+}
+
+.delivery i {
+  color: #6394F8;
+}

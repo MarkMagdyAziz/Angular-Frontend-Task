@@ -1,0 +1,23 @@
+<section class="container-fluid mt-4 hot-container pt-2">
+  <div class=" row d-flex justify-content-center align-itmes-center mt-3">
+    <ng-container *ngFor="let product of hotProducts">
+      <div class="card col-md-3 col-lg-2 ms-2 mb-2 product" style="width: 14rem;" HoverShadow="yellow">
+
+        <span class="hot p-2">Hot</span>
+
+        <img [src]="product.thumbnail" class="card-img-top img-fluid hot-prod-img" alt="product img">
+        <div class="card-body d-flex flex-column justify-content-between align-items-center">
+          <h6 class="card-title">{{product.title | split: " "}}</h6>
+          <div class="prod-disc">
+            {{product.price/ (1- product.discountPercentage/100 )|currency }}
+          </div>
+          <p class="card-text">
+            {{product.price | currency}}
+          </p>
+        </div>
+      </div>
+    </ng-container>
+
+  </div>
+
+</section>

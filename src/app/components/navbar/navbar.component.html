@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class=" navbar-brand" routerLink="/">Home</a>
+    <button class="navbar-toggler" type="button" type="button" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " [ngClass]="{ 'show': navbarOpen }">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/Search">Search</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div class="d-flex justify-content-center align-content-center p-2">
+      <a class="text-decoration-none text-black" routerLink="/Cart">
+        <span class="fa fa-shopping-cart fs-5 text-dark"></span>
+      </a>
+      <span class="cart-text ms-1 text-muted">Cart</span>
+      <a routerLink="/Cart" class="cart-icon text-decoration-none px-2 py-1 ms-1 fs-5"
+        style="cursor:pointer">{{itemInCart}}</a>
+    </div>
+  </div>
+</nav>

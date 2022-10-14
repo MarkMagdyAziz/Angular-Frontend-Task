@@ -1,0 +1,28 @@
+.fa {
+  position: relative;
+}
+
+.cart {
+  position: absolute;
+  top: -12px;
+  left: 4px
+}
+
+.cart-icon {
+  display: inline-block;
+  font-size: 12px;
+  background-color: #6394F8;
+  border-radius: 10px;
+  color: white;
+  line-height: 1;
+  text-align: center;
+  padding: 3px 7px;
+  vertical-align: middle;
+
+
+
+}
+
+.cart-text {
+  font-size: 18px;
+}

@@ -1,0 +1,25 @@
+<section class="container mt-4">
+  <div class="my-4">
+    <label for="category" class="cat-label"> Category: </label>
+    <select class="form-select mb-3" (change)="filterCategory()" [(ngModel)]="selectedCatgeory" name="category">
+      <option value=""> ALL </option>
+      <option *ngFor="let cat of categories" [value]="cat">{{cat}} </option>
+    </select>
+  </div>
+  <div class="row d-flex justify-content-center align-itmes-center" infinite-scroll [infiniteScrollDistance]="distance"
+    [infiniteScrollThrottle]="throttle" (scrolled)="onScroll()">
+    <ng-container *ngFor="let product of products">
+      <div class="card col-md-3 col-lg-2 ms-2 mb-2" style="width: 16rem;" HoverShadow="red">
+        <img [src]="product.thumbnail" class="card-img-top img-fluid" alt="product img">
+        <div class="card-body d-flex flex-column justify-content-between align-items-center">
+          <h5 class="card-title">{{product.title}}</h5>
+          <p class="card-text">{{product.price | currency}}
+          </p>
+
+          <a class=" btn btn-primary align-self-center" [routerLink]="['/Details' , product.id]">Details</a>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+</section>
